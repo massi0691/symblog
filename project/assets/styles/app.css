@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#search_categories input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+#search_categories label {
+  margin-right: 0.5rem;
+}

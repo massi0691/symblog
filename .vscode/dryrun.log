@@ -1,0 +1,20 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/egantois/Workspace/youtube/symblog-youtube'
+make start
+make[1]: Entering directory '/home/egantois/Workspace/youtube/symblog-youtube'
+make docker-start 
+make[2]: Entering directory '/home/egantois/Workspace/youtube/symblog-youtube'
+docker-compose up -d
+make[2]: Leaving directory '/home/egantois/Workspace/youtube/symblog-youtube'
+make[1]: Leaving directory '/home/egantois/Workspace/youtube/symblog-youtube'
+make composer-install
+make[1]: Entering directory '/home/egantois/Workspace/youtube/symblog-youtube'
+docker exec -w /var/www/project www_symblog_youtube composer install
+make[1]: Leaving directory '/home/egantois/Workspace/youtube/symblog-youtube'
+make npm-install
+make[1]: Entering directory '/home/egantois/Workspace/youtube/symblog-youtube'
+docker exec -w /var/www/project www_symblog_youtube npm install
+make[1]: Leaving directory '/home/egantois/Workspace/youtube/symblog-youtube'
+/bin/echo -e "\x1b[32m## "The application is available at: http://127.0.0.1:8000/."\x1b[0m"
+make: Leaving directory '/home/egantois/Workspace/youtube/symblog-youtube'
+ 
